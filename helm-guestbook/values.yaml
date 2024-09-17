@@ -5,24 +5,24 @@
 replicaCount: 1
 
 image:
-  repository: gcr.io/heptio-images/ks-guestbook-demo
-  tag: 0.1
+  repository: nexus-repo:latest 442426854264.dkr.ecr.eu-west-1.amazonaws.com/nexus-repo
+  tag: 4d12cb5-2024-09-17-05-49
   pullPolicy: IfNotPresent
 
-containerPort: 80
+containerPort: 8080
 
 service:
   type: ClusterIP
   port: 80
 
 ingress:
-  enabled: false
+  enabled: true
   annotations: {}
-    # kubernetes.io/ingress.class: nginx
+      kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   path: /
   hosts:
-    - chart-example.local
+    - 
   tls: []
   #  - secretName: chart-example-tls
   #    hosts:
