@@ -6,7 +6,7 @@ replicaCount: 1
 
 image:
   repository: 442426854264.dkr.ecr.eu-west-1.amazonaws.com/nexus-repo
-  tag: 4d12cb5-2024-09-17-05-49
+  tag: be0dc56-2024-09-18-08-56
   pullPolicy: IfNotPresent
 
 containerPort: 8080
